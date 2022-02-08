@@ -1,0 +1,38 @@
+body, html{
+    font-family: 'Open Sans', sans-serif;
+	
+}
+input::placeholder{
+   color: rgba(255, 255, 255, 0.288);
+}
+option::selection{
+    background-color: black;
+}
+fieldset{
+    background-color: var(--terciary);
+}
+#header{
+    width: 100%;
+    background-color: var(--primary);
+    transition: background ease-out 0.2s;
+}
+#header .navbar-collapse{
+    width: auto;
+}
+
+#header .nav-link{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+    border-bottom: solid 4px transparent;
+    
+}
+#header .nav-link:hover{
+    border-bottom: solid 4px var(--secondary);
+    color: var(--secondary);
+}
+
+#shadownumber{
+    color: black;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
