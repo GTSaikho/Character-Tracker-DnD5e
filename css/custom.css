@@ -45,3 +45,13 @@ table th {
     width: auto !important;
 }
 
+.skillsSize {
+    height:500px;
+    overflow-y: scroll;
+}
+.backgroundText{
+    height: 450px !important;
+}
+.navbar-nav > li > .dropdown-menu { 
+    background-color: #FF0000;
+}

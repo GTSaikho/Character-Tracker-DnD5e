@@ -13,3 +13,7 @@
     background-color:  var(--terciary);
     color: var(--secondary)
   }
+
+  .dropdown-menu{
+      color: yellow;
+  }

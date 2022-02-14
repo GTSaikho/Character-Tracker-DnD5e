@@ -46,15 +46,15 @@
             <form>
                 <div class="row mt-3 ">
                     <div class="col-lg-3 mt-4 ">
-                        <img class="img-fluid img-thumbnail mx-auto my-5 d-block" src="imagem.jpg">
+                        <img class="img-fluid img-thumbnail mx-auto my-5 d-block" width="300px" height="300px" src="imagem.jpg">
                     </div>
                     <div id="darkBackground" class="col mx-auto m-4 shadow rounded">
                         <label id="contentBackground" for="charStats"
                             class="d-flex justify-content-center text-light rounded mt-3 py-4 h2 col-12">Character
                             Information</label>
-                        <div id="charStats" class="d-flex flex py-3">
+                        <div id="charStats" class="row col-12 mx-auto py-3">
                             <div id="contentBackground"
-                                class="input-group d-flex justify-content-center text-light rounded col-3 py-5">
+                                class="input-group d-flex justify-content-center text-light rounded col-lg-3 col-sm py-5">
                                 <label for="NameInput" class="form-label h4">Name</label>
                                 <div class="w-100"></div>
                                 <input
@@ -62,7 +62,7 @@
                                     type="text" id="NameInput" placeholder="Name">
                             </div>
                             <div id="contentBackground"
-                                class="input-group d-flex justify-content-center text-light rounded col-3 py-5 px-3 ml-1">
+                                class="input-group d-flex justify-content-center text-light rounded col-lg-3 col-sm py-5 px-3 ml-lg-1">
                                 <label for="BackgroundInput" class="form-label h4">Background</label>
                                 <div class="w-100"></div>
                                 <input
@@ -70,7 +70,7 @@
                                     type="text" id="BackgroundInput" placeholder="Background">
                             </div>
                             <div id="contentBackground"
-                                class="input-group d-flex justify-content-center text-light rounded col-3 py-5 ml-1">
+                                class="input-group d-flex justify-content-center text-light rounded col-lg-3 col-sm py-5 ml-lg-1">
                                 <label for="RaceInput" class="form-label h4">Race</label>
                                 <div class="w-100"></div>
                                 <input
@@ -78,7 +78,7 @@
                                     type="text" id="RaceInput" placeholder="Race">
                             </div>
                             <div id="contentBackground"
-                                class="input-group d-flex justify-content-center text-light rounded col py-5 ml-1">
+                                class="input-group d-flex justify-content-center text-light rounded col-lg col-sm py-5 ml-lg-1">
                                 <label for="RaceInput" class="form-label h4">Level</label>
                                 <div class="w-100"></div>
                                 <input
@@ -94,7 +94,7 @@
     <!--ABILITY SCORE-->
     <div class="container">
         <div class="row">
-            <div class="col-12 rounded mb-4">
+            <div class="col-12 rounded mb-3">
                 <div id="darkBackground" class="row rounded p-3">
                     <div id="contentBackground" class="col-12 h2 rounded text-light d-flex justify-content-center">
                         <div>Ability Score</div>
@@ -106,7 +106,7 @@
                         <input
                             class="form-control text-center border-top-0 border-left-0 border-right-0 border-bottom bg-transparent text-light"
                             type="number" id="RaceInput" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-lg" placeholder="Level" value="8">
+                            aria-describedby="inputGroup-sizing-lg" placeholder="Level" value="8" min="3" max="15">
                     </div>
                     <div id="contentBackground"
                         class="input-group input-group-lg d-flex justify-content-center text-light col-lg-2 col-md-4 p-2">
@@ -158,295 +158,384 @@
         </div>
     </div>
     <!--ABILITY SCORE-->
+    <!--CLASS-->
+    <div class="container text-light">
+        <div class="row">
+            <div id="darkBackground" class="col-12 row rounded mx-auto mb-3">
+                <div id="contentBackground" class="col-12 row mx-auto d-flex h5 justify-content-center rounded mt-3">
+                    Classe
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="input-group mb-3">
+                        <select id="contentBackground" class="form-select rounded dropdown-menu-dark d-flex justify-content-center px-5 mt-3 h3" id="inputGroupSelect02">
+                          <option selected>Class</option>
+                          <option value="1">Artificer</option>
+                          <option value="2">Barbarian</option>
+                          <option value="3">Bard</option>
+                          <option value="4">Cleric</option>
+                          <option value="5">Druid</option>
+                          <option value="6">Fighter</option>
+                          <option value="7">Monk</option>
+                          <option value="8">Paladin</option>
+                          <option value="9">Ranger</option>
+                          <option value="10">Rogue</option>
+                          <option value="11">Sorcerer</option>
+                          <option value="12">Warlock</option>
+                          <option value="13">Wizard</option>
+                        </select>
+                      </div>
+                    
+                </div>
+                <div class="col-lg-8 row col-sm-12 bg-dark rounded mt-3 mb-4">
+                    <div class="col-lg-4 col-sm-12 d-flex h2 justify-content-center pt-2">
+                        Spell DC =
+                    </div>
+                    <div class="col-lg-4 col-sm-12 d-flex h2 justify-content-center pt-2">
+                        0
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!--CLASS-->
     <!--SAVING THROWS AND PB-->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-2 col-md-12 px-1">
-                <div id="contentBackground" class="col-md-12 rounded-circle border shadow float-right mt-5 py-3">
-                    <div class="d-flex justify-content-center h5 pt-4 pb-0 mb-0 text-light">Proficiency</div>
-                    <div class="d-flex justify-content-center h5 pt-0 mt-0  text-light"> Bonus</div>
-                    <div class="d-flex justify-content-center h1" id="shadownumber"> 2 </div>
+        <div class="row mt-lg-0 mt-sm-5">
+            <div class="col-lg-3 col-md-12 px-1">
+                <div id="darkBackground" class="rounded p-3 text-light">
+                    <div id="contentBackground" class="col h5 rounded d-inline-flex justify-content-center">
+                        <div>Proficiency Bonus</div>
+                    </div>
+                    <div class="col mt-1 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center mb-0 h1 pt-3 pb-2">0</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-12 rounded">
-                <div id="darkBackground" class="row rounded p-3">
-                    <div id="contentBackground" class="col-12 h5 rounded text-light d-flex justify-content-center">
+            <div class="col-lg-9 col-md-12 rounded mt-lg-0 mt-3">
+                <div id="darkBackground" class="row rounded p-3 text-light">
+                    <div id="contentBackground" class="col-12 h5 rounded  d-flex justify-content-center">
                         <div>Saving Throws</div>
                     </div>
-                    <div id="contentBackground" class="input-group d-flex justify-content-center text-light col-lg-2 col-md-2 p-2 mt-2">
-                        <div class="row"> 
-                            <div class="col-12">Strength</div>
-                            <div class="form-label col-12"> 0 </div>
-                        </div>  
+                    <div class="col-lg col-sm-12 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Strength</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
-                    <div id="contentBackground"
-                        class="input-group d-flex justify-content-center border rounded-circle text-light col-lg-2 col-md-2 p-2 mt-2">
-                        <label for="RaceInput" class="form-label h5 p-3">Dexterity</label>
-                        <div class="w-100"></div>
-                        <label for="RaceInput" class="form-label h1">0</label>
+                    <div class="col-lg col-sm-12 ml-lg-1 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Dexterity</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
-                    <div id="contentBackground"
-                        class="input-group d-flex justify-content-center border rounded-circle text-light col-lg-2 col-md-4 p-2 mt-2">
-                        <label for="RaceInput" class="form-label h5 p-3">Constitution</label>
-                        <div class="w-100"></div>
-                        <label for="RaceInput" class="form-label h1">0</label>
+                    <div class="col-lg col-sm-12 ml-lg-1 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Constitution</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
-                    <div id="contentBackground"
-                        class="input-group d-flex justify-content-center border rounded-circle text-light col-lg-2 col-md-4 p-2 mt-2">
-                        <label for="RaceInput" class="form-label h5 p-3">Inteligence</label>
-                        <div class="w-100"></div>
-                        <label for="RaceInput" class="form-label h1">0</label>
+                    <div class="col-lg col-sm-12 ml-lg-1 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Inteligence</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
-                    <div id="contentBackground"
-                        class="input-group d-flex justify-content-center border rounded-circle text-light col-lg-2 col-md-4 p-2 mt-2">
-                        <label for="RaceInput" class="form-label h5 p-3">Wisdom</label>
-                        <div class="w-100"></div>
-                        <label for="RaceInput" class="form-label h1">0</label>
+                    <div class="col-lg col-sm-12 ml-lg-1 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Wisdom</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
-                    <div id="contentBackground"
-                        class="input-group d-flex justify-content-center border border-5 rounded-circle text-light col-lg-2 col-md-4 p-2 mt-2">
-                        <label for="RaceInput" class="form-label h5 p-3">Charisma</label>
-                        <div class="w-100"></div>
-                        <label for="RaceInput" class="form-label h1">0</label>
+                    <div class="col-lg col-sm-12 ml-lg-1 mt-sm-1 py-sm-2 rounded bg-dark">
+                        <div class="w-10 ">
+                            <div class="d-flex justify-content-center ">Charisma</div>
+                            <div class="d-flex justify-content-center h5">0</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--SAVING THROWS AND PB-->
-    <!--BACKGROUND AND STORY-->
+    <!--BACKGROUND AND SKILLS-->
     <div class="container">
-        <div class="col-12 row px-0 mx-auto">
-            <div id="darkBackground" class="col-6 mt-4 rounded">
+        <div class="col-12 row mx-auto px-0 mt-3">
+            <div id="darkBackground" class="col-lg-7 mx-auto col-sm-12 rounded">
                 <div id="contentBackground" class="col-12 h2 rounded text-light d-flex mt-4 justify-content-center">
                     <div>Background</div>
                 </div>
                 <div id="contentBackground" class="col-12 h5 rounded text-light d-flex mt-1 justify-content-center">
                     <div>Background Feature</div>
                 </div>
+                <div class="col-12">
+                    <div class="input-group pb-lg-1 pb-4">
+                        <textarea class="backgroundText form-control bg-dark text-light"></textarea>
+                      </div>
+                </div>
             </div>
-            <div id="darkBackground" class="col-lg-6 col-md-12 col-sm-12 float-right rounded mt-4">
+            <div id="darkBackground" class="col-lg-4 col-md-12 col-sm-12 border-lg-left border-secondary rounded mt-lg-0 mt-3">
                 <div id="contentBackground" class="col-12 h2 rounded text-light d-flex mt-4 justify-content-center">
                     <div>Skills</div>
                 </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                <div class="skillsSize">
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Acrobatics
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Animal Handling
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Arcana
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Athletics
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Deception
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    History
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Insight
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Intimidation
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Investigation
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Medicine
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Nature
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Perception
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Performance
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Persuasion
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Religion
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Sleight of Hand
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                <div class="row mx-auto text-light h5 mb-2">
-                    <div class="col-md-4 border-bottom border-secondary ml-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="5 + 4 x 2 = 13 " for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Stealth
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                    <div class="col-md-4 border-bottom border-secondary ml-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label d-flex justify-content-center pl-4" for="flexCheckDefault">
-                                Acrobatics
-                            </label>
+                    <div class="row col-12 mx-auto text-light h5 mb-2">
+                        <div class="col-md-10 border-bottom border-secondary mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label d-flex justify-content-center pl-4"
+                                    for="flexCheckDefault">
+                                    Survival
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 border bg-dark mb-0 border-secondary d-flex justify-content-center">
+                            0
                         </div>
                     </div>
-                    <div class="col-md-1 border-bottom mb-0 border-secondary">
-                        0
-                    </div>
-                </div>
-                
 
+                </div>
 
             </div>
         </div>
