@@ -1,14 +1,16 @@
 body, html{
     font-family: 'Open Sans', sans-serif;
-	
 }
 input::placeholder{
-   color: rgba(255, 255, 255, 0.288);
+   color: rgb(255, 255, 255);
 }
 option::selection{
     background-color: black;
 }
 fieldset{
+    background-color: var(--terciary);
+}
+#contentBackground{
     background-color: var(--terciary);
 }
 #header{
@@ -18,6 +20,9 @@ fieldset{
 }
 #header .navbar-collapse{
     width: auto;
+}
+#darkBackground{
+    background-color: rgba(0, 0, 0, 0.76);
 }
 
 #header .nav-link{
@@ -36,3 +41,7 @@ fieldset{
     color: black;
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
+table th {
+    width: auto !important;
+}
+

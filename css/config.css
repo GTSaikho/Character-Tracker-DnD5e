@@ -1,5 +1,15 @@
 :root{
-    --primary: rgb(21, 182, 88);
-    --secondary: rgb(23, 34, 27);
-    --terciary:  rgba(37, 128, 57, 0.555);
+    --primary: rgb(207, 79, 79);
+    --secondary: rgb(255, 255, 255);
+    --terciary:  rgba(145, 63, 63, 0.801);
 }
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(221, 221, 221, 0.37);
+    opacity: 1; /* Firefox */
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color:  var(--terciary);
+    color: var(--secondary)
+  }
